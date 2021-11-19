@@ -1,4 +1,4 @@
-# Tree-Delineation_Drone-Data
+# Tree Delineation in VHR Optical Drone Data
 
 The module detects individual trees in drone-based optical remote sensing data, and tree-level physiogicval parameter estiamtion. In particular the module performs the followng: 
 a) Raw drone-based optical data preprocessing (including nDSM and orthomosaic generatation using photogrammetric processing using Agisoft APIs).
