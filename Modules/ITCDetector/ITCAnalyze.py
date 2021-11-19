@@ -54,26 +54,6 @@ class AnalyzeUtils:
         print('Modelling Phenological Data!')
         self.ModelPhenologyTreesInMultiImages()
 
-    # def Preprocess100RefData(self):
-    #     print('Phenological Data!')
-    #     # RefData = gpd.read_file(self.Li6400Data)
-    #     Li6400Dt = pd.read_excel(self.AllRefData,sheet_name=self.RefSheetID)
-    #     Li6400Dt['Tree-Gen-ID'].replace('_','-',regex=True,inplace=True)
-    #     print(Li6400Dt.head())
-
-    #     PigmentsDt = pd.read_excel(self.PigmentsData ,sheet_name='Pigments-2018')
-    #     # PigmentsDt['Tree-#'].replace('_','-',regex=True,inplace=True)
-    #     print(PigmentsDt.head())
-
-    #     SCADt = pd.read_excel(self.SCAData,sheet_name='2018')
-    #     SCADt['Genotype'].replace('.','-',regex=True,inplace=True)
-    #     print(SCADt.head())
-
-    #     WaterPotentialDt = pd.read_excel(self.WaterPotentialData,sheet_name='Sheet3')
-    #     WaterPotentialDt['Individual'].replace('.','-',regex=True,inplace=True)
-    #     print(WaterPotentialDt.head())
-
-
     def ModelPhenologyTreesInMultiImages(self):        
         # Read RS dataset
         tempoutFolder = os.path.join(self.base_path, gc.PHENOLOGY_OUT_FOLDER, "XLS", "tmp")
