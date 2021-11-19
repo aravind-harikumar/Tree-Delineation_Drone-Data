@@ -160,56 +160,6 @@ class AnalyzeUtils:
         plt.suptitle("{0} Index Vs {1} Conc.".format(self.GraphRSColumn,self.GraphFieldColumn),fontsize=18,fontname="Times New Roman", fontweight='bold')
         plt.show()
         print(R22)
-                    # from scipy import stats
-                    # def r2(x, y):
-                    #     return stats.pearsonr(x, y)[0] ** 2
-                    # # sns.jointplot(x, y, kind="reg", stat_func=r2)
-                    # # Initialize a grid of plots with an Axes for each walk
-                    # grid = sns.FacetGrid(in_file, col="Month", hue="Year",
-                    #                     )
-                    # # Draw a line plot to show the trajectory of each random walk
-                    # # sns.regplot(x="Caratenoid", y="CCI", data=df_pred_tree)
-                    # grid.map(sns.regplot, "Caratenoid", "CCI", fit_reg=True, marker="o",x_estimator=np.mean)
-                    # plt.xlim(0, 1)
-                    # plt.ylim(0, 1)
-                    # # Adjust the tick positions and labels
-                    # # grid.set(xticks=np.arange(5), yticks=[-3, 3],
-                    # #          xlim=(-.5, 4.5), ylim=(-3.5, 3.5))
-                    # # Adjust the arrangement of the plots
-                    # grid.fig.tight_layout(w_pad=1)
-                    # grid.add_legend()
-                    # # # month = 'August'
-                    # # # sns.regplot(x="Caratenoid", y="CCI", data=df_pred_tree)
-        # sns.lmplot(x="FvFm", y="CCI", col="Month", data=df_model_trees)
-        # # pyplot.show()
-        # plt.show()
-
-
-
-#         # Get subset data 
-#         # Ref100RSDataToModel = RefData[RefData['genotype_i'].isin(Ref100Data['genotype_i'])]
-
-#         Joint_RS_And_Field_100_Trees = Ref100Data.merge(Ref100Data, how='left', left_on='genotype_i', right_on='genotype_i')
-#         sns.set(style="ticks")
-#         # tree_id              Tree-#_1 MAX_COND, MAX_PHOTO, AVG_COND, AVG_PHOTO          Individual Barr MPa                  
-#         # Show the results of a linear regression within each dataset
-#         g = sns.lmplot(x="TreeHeightInMeters", y="HeightEstD2", col="no_bloc", hue="no_bloc", data=Joint_RS_And_Field_100_Trees,
-#                 col_wrap=2, ci=None, palette="muted", height=4, aspect=1.1, fit_reg=True, sharex=False,sharey=False,
-#                 scatter_kws={"s": 50, "alpha": 1})
-#         g.set(ylim=(0, None))
-#         g.set(xlim=(0, None))
-#         def annotate(data, **kws):
-#             r, p = sp.stats.pearsonr(data['TreeHeightInMeters'], data['HeightEstD2'])
-#             ax = plt.gca()
-#             ax.text(.05, .8, 'r={:.2f}, p={:.2g}'.format(r, p),
-#                     transform=ax.transAxes)
-# #     ax.set_ylim(0,)
-# #     ax[0,1].set_ylim(0,)
-    
-#         g.map_dataframe(annotate)
-
-#         # for isx, rows in Ref100Dataneew.iterrows():
-#         #     print("'"+ rows['genotype_i'] + "',")
 
     def ExtractPhenology(self):
         print('Extracting Phenological Data!')
@@ -310,56 +260,6 @@ class AnalyzeUtils:
 
         print('Saving Phenology Details to: {0}'.format(out_shape_path))
         ref_data_frame.to_file(driver = 'ESRI Shapefile', filename = out_shape_path)
-
-    # def CompileRemoteSensingData(self):
-    
-    #     in_shape_path1 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20170626/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-    #     in_shape_path2 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20170809/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-    #     in_shape_path3 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20171011/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-    #     in_shape_path4 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20180516/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-    #     in_shape_path5 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20180710/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-    #     in_shape_path6 ='/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/20181015/ITC-Data/All-ITC/Out/ITCSpectralInfo.shp'
-
-    #     in_data_frame1 = gpd.read_file(in_shape_path1)
-    #     in_data_frame1['Year'] =   '2017'
-    #     in_data_frame1['Month'] =  'June'
-    #     in_data_frame1.reset_index()
-    #     in_data_frame1 = in_data_frame1[['NDVI','PRI','CCI','Year','Month']]
-    #     # in_data_frame1.to_excel('/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/Phenology/XLS/out.xlsx')
-    #     print(in_data_frame1.head())
-
-    #     in_data_frame2 = gpd.read_file(in_shape_path2)
-    #     in_data_frame2['Year']  =  '2017'
-    #     in_data_frame2['Month'] =  'August'
-    #     in_data_frame2.reset_index()
-    #     in_data_frame2 = in_data_frame2[['NDVI','PRI','CCI','Year','Month']]
-        
-    #     in_data_frame3 = gpd.read_file(in_shape_path3)
-    #     in_data_frame3['Year']  =  '2017'
-    #     in_data_frame3['Month'] =  'October'
-    #     in_data_frame3.reset_index()
-    #     in_data_frame3 = in_data_frame1[['NDVI','PRI','CCI','Year','Month']]
-        
-    #     in_data_frame4 = gpd.read_file(in_shape_path4)
-    #     in_data_frame4['Year'] =  '2018'
-    #     in_data_frame4['Month'] =  'June'
-    #     in_data_frame4.reset_index()
-    #     in_data_frame4 = in_data_frame4[['NDVI','PRI','CCI','Year','Month']]
-        
-    #     in_data_frame5 = gpd.read_file(in_shape_path5)
-    #     in_data_frame5['Year']  =  '2018'
-    #     in_data_frame5['Month']=  'August'
-    #     in_data_frame5.reset_index()
-    #     in_data_frame5 = in_data_frame5[['NDVI','PRI','CCI','Year','Month']]
-        
-    #     in_data_frame6 = gpd.read_file(in_shape_path6)
-    #     in_data_frame6['Year']  =  '2018'
-    #     in_data_frame6['Month'] =  'October'
-    #     in_data_frame6.reset_index()
-    #     in_data_frame6 = in_data_frame6[['NDVI','PRI','CCI','Year','Month']]
-
-    #     dfff = pd.concat([in_data_frame1,in_data_frame2,in_data_frame3,in_data_frame4,in_data_frame5,in_data_frame6],axis=0)
-    #     dfff.to_excel('/mnt/4TBHDD/StCasimir-Multispectral-Analysis/2_Analysis-And-Results/ProcessedMSData1/Phenology/XLS/out.xlsx')
 
     def GenerateShpWithRef(self):
         # first file 
