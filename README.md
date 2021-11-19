@@ -9,7 +9,6 @@ The module detects individual trees in drone-based optical remote sensing data, 
 - 
 Syntax:
 python GenerateOrthoImage.py
-
 NOTES:
 * Agisoft Metashape Professional Software
 * Python version should be >= 3.7.
