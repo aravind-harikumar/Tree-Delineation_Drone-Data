@@ -153,6 +153,7 @@ if(runpart_analysis):
 '''                          Analysis                               '''
 '''#################################################################'''
 FileDataInfo = {
+    'BaseFolder'        :  Base_Processed_Data_MS,
     'Dates'             : ['20170626', '20170809','20171011','20180516','20180710','20181015'], # Dates = ['20180516','20180710','20181015'] 
     'MaxNeighbourDist'  : 1,
     'ref_file_shp'      : "/mnt/4TBHDD/StCasimir-Multispectral-Analysis/0_SpruceUp-Raw-Data/Site_info/ReferenceData/SC_TREE_REFERENCE_DATA_1.shp", #"/mnt/4TBHDD/Spruce_Up_New_Copy/SpruceUp/GPS/trees_&_targets/trees_ABD.shp"
