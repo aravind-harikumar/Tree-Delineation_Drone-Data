@@ -3,7 +3,6 @@
 The module detects individual trees in drone-based optical remote sensing data, and tree-level physiogicval parameter estiamtion. In particular the module performs the followng: 
 - Raw drone-based optical data preprocessing (including nDSM and orthomosaic generatation using photogrammetric processing using Agisoft APIs).
 - Detect individual tree
-- Genate fuzzy (FCM-MRF) map for crow and background
 - Delineated individual trees
 - Estimate tree biophysical and physiological parameters.
 
