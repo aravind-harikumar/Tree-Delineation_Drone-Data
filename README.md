@@ -6,7 +6,7 @@ The module detects individual trees in drone-based optical remote sensing data, 
 - Genate fuzzy (FCM-MRF) map for crow and background
 - Delineated individual trees
 - Estimate tree biophysical and physiological parameters.
-- 
+
 Syntax:
 python GenerateOrthoImage.py
 NOTES:
